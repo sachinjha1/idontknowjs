@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Workers</title>
+</head>
+<body>
+<h1>Hello WebWorkers</h1>
+<script>
+
+    let worker = new Worker("worker.js");
+    //Web worker and main thread talk through messaging APIs
+    worker.postMessage("hello");
+
+</script>
+</body>
+</html>

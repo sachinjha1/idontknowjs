@@ -15,7 +15,7 @@ var rect1 = new Rectangle(15,30);
 var rect2 = new (rect1.__proto__.constructor)(10,20);
 
 
-//.constructor is property of prototype to show the function (prototype property is alwways on a function)
+//.constructor is property of prototype to show the function (prototype property is always on a function)
 
 
 //__proto__ of OBJECT

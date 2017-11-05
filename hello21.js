@@ -59,3 +59,8 @@ console.log('--7-->child.__proto__ which is parent itself');
 console.log(child.__proto__);
 //child's __proto__ is parent and executing foo() of parent
 child.__proto__.foo();
+
+
+/**
+ * The ‘prototype’ property of any function points to the object that will be asigned as the prototype of instances created with that function when using ‘new’.
+ */
