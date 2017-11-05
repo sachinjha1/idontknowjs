@@ -10,8 +10,16 @@
 
     let worker = new Worker("worker.js");
     //Web worker and main thread talk through messaging APIs
-    worker.postMessage("hello");
+    worker.postMessage("1");
+    worker.addEventListener("message", function (e) {
+        console.log("Main thread got: " + e.data);
+    });
 
+    let ab = new ArrayBuffer(32);
+    worker.postMessage(ab);
+    console.log("Printing ab after copy: ", ab.byteLength);
+    worker.postMessage(ab, [ab]);
+    console.log("Printing ab after transfer: ", ab.byteLength);
 </script>
 </body>
 </html>
